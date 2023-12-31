@@ -8,9 +8,9 @@ const APIURL = `https://api.weatherapi.com/v1/current.json?key=${APIKEY}&q=`
 const weather = async () => {
   let response = await fetch(`${APIURL}${input.value}`);
   let data = await response.json();
-  text.innerHTML = `Weather in ${input.value} is ${data.current.feelslike_c}ºC, ${data.current.condition.text}`
+  text.innerHTML = `Weather in ${input.value.charAt(0).toUpperCase() + input.value.slice(1)} is ${data.current.feelslike_c}ºC, ${data.current.condition.text}`
 }
 
 button.addEventListener('click', () => {
   weather();
-})
+});
