@@ -6,8 +6,8 @@ HTML5, CSS3, JavaScript, [Weather Api](https://www.weatherapi.com/)
 
 ## Demo
 https://sanketh-shinde.github.io/weather-app/
-## 📸 Screenshots
 
+## 📸 Screenshots
 ![App Screenshot](https://i.postimg.cc/jSLQQwkK/demo-screenshot.png)
 
 ## 🔗 Links
