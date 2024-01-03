@@ -8,7 +8,11 @@ const APIURL = `https://api.weatherapi.com/v1/current.json?key=${APIKEY}&q=`
 const weather = async () => {
   let response = await fetch(`${APIURL}${input.value}`);
   let data = await response.json();
-  text.innerHTML = `Weather in ${input.value.charAt(0).toUpperCase() + input.value.slice(1)} is ${data.current.feelslike_c}ºC, ${data.current.condition.text}`
+  try {
+    text.innerHTML = `Weather in ${data.location.name} is ${data.current.feelslike_c}ºC, ${data.current.condition.text}`;
+  } catch (error) {
+    text.innerHTML = `Invalid City Name`;
+  }
 }
 
 button.addEventListener('click', () => {
