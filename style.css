@@ -50,6 +50,10 @@ input {
   border: 1px solid white;
 }
 
+#btn:hover {
+  background-color: #062f55;
+}
+
 #display {
   margin-top: 30px;
   font-size: 25px;
