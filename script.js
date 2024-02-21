@@ -9,7 +9,7 @@ const weather = async () => {
   let response = await fetch(`${APIURL}${input.value}`);
   let data = await response.json();
   try {
-    text.innerHTML = `Weather in ${data.location.name} is ${data.current.feelslike_c}ºC, ${data.current.condition.text}`;
+    text.innerHTML = `Weather in ${data.location.name} is ${data.current.temp_c}ºC, ${data.current.condition.text}`;
   } catch (error) {
     text.innerHTML = `Invalid City Name`;
   }
@@ -17,4 +17,10 @@ const weather = async () => {
 
 button.addEventListener('click', () => {
   weather();
+});
+
+input.addEventListener("keypress", (e) => {
+  if (e.key === "Enter") {
+    weather();
+  }
 });
